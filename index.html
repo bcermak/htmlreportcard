@@ -5,9 +5,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
     <!--[if !mso]--><!-- -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
     <link href='https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700' rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel="stylesheet">
     <!-- <![endif]-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
     <title>Merchant Quarterly Report Card</title>
 
@@ -18,9 +21,6 @@
             margin: 0;
             padding: 0;
             -webkit-font-smoothing: antialiased;
-            mso-margin-top-alt: 0px;
-            mso-margin-bottom-alt: 0px;
-            mso-padding-alt: 0px 0px 0px 0px;
         }
         
         p,
@@ -42,11 +42,12 @@
         html {
             width: 100%;
         }
+
+        #ecrTable {
+                width: 600px;
+            }
         
-        table {
-            font-size: 14px;
-            border: 0;
-        }
+        
         /* ----------- responsivity ----------- */
         
         @media only screen and (max-width: 640px) {
@@ -95,6 +96,11 @@
                 width: 100% !important;
                 height: auto !important;
             }
+            #ecrTable {
+                width: 320px !important;
+                height: auto !important;
+            }
+
         }
         
         @media only screen and (max-width: 479px) {
@@ -124,6 +130,12 @@
                 width: 280px !important;
                 height: auto !important;
             }
+
+            #ecrTable {
+                width: 28px !important;
+                height: auto !important;
+            }
+        
         }
     </style>
     <!-- [if gte mso 9]><style type=”text/css”>
@@ -136,17 +148,7 @@
 
 
 <body class="respond" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-    <!-- pre-header -->
-    <table style="display:none!important;">
-        <tr>
-            <td>
-                <div style="overflow:hidden;display:none;font-size:1px;color:#ffffff;line-height:1px;font-family:Arial;maxheight:0px;max-width:0px;opacity:0;">
-                    Pre-header for the newsletter template
-                </div>
-            </td>
-        </tr>
-    </table>
-    <!-- pre-header end -->
+>
     <!-- header -->
     <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="ffffff">
 
@@ -252,30 +254,58 @@
                         <td height="25" style="font-size: 25px; line-height: 25px;">&nbsp;</td>
                     </tr>
 
-                    <tr>
-                        <table cellpadding="0" cellspacing="0" width="640" align="center" border="1">     
-                            <tr>         
-                            <td>            
-                            <table cellpadding="0" cellspacing="0" width="318" align="left" border="1">                 
-                            <tr>                     
-                            <td>This is where the logo goes.</td>                 
-                            </tr>             
-                            </table>             
-                            <table cellpadding="0" cellspacing="0" width="318" align="left" border="1">                 
-                            <tr>                    
-                            <td>This is where the image goes.</td>                 
-                            </tr>             
-                            </table>             
-                            <table cellpadding="0" cellspacing="0" width="640" align="left" border="1">                 
-                            <tr>                     
-                            <td>Here is some more content in a new full-width table.</td>                 
-                            </tr>             
-                            </table>         
-                            </td>     
-                            </tr> 
-                            </table> 
+                    <table id="ecrTable" class="table table-dark table-striped" style=" text-align: center;">
+                        <thead>
+                          <tr style="color: #ffffff;">
+                            <th scope="col">KPI - 28d</th>
+                            <th scope="col"><span style="color: #FCC419">{{Company name}}</span></th>
+                            
+                          </tr>
+                        </thead>
+                        <tbody style="text-align: center;">
+                          <tr>
+                            <th scope="row"> Shoppers</th>
+                            <td><span style="color: #FCC419;">{{KPI}}</span></td>
+                            
+                          </tr>
+                          <tr>
+                            <th scope="row">Earners</th>
+                            <td><span style="color: #FCC419;">{{KPI}}</span></td>
+                            
+                          </tr>
+                          <tr>
+                            <th scope="row">Redeemers</th>
+                            <td><span style="color: #FCC419;">{{KPI}}</span></td>
+                            
+                          </tr>
+                          <tr>
+                            <th scope="row">Earning Customer Rate (ECR)</th>
+                            <td><span style="color: #FCC419;">{{KPI}}</span></td>
+                            
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <tr>
+                        <td height="25" style="font-size: 25px; line-height: 25px;">&nbsp;</td>
                     </tr>
 
+                      <tr>
+                        <td align="center">
+                            <table border="0" width="400" align="center" cellpadding="0" cellspacing="0" class="container590">
+                                <tr>
+                                    <td align="center" style="color: #333333; font-size: 16px; font-family: 'Work Sans', Calibri, sans-serif; line-height: 24px;">
+
+
+                                        <div style="line-height: 24px">
+
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rem tempore, atque temporibus dicta numquam accusamus iure laudantium magnam cum id facere inventore deserunt provident voluptatum reiciendis a culpa beatae! Quos sapiente nesciunt adipisci officiis in neque eaque quaerat maxime esse iure. Deleniti, veniam mollitia!
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
 
                 </table>
 
